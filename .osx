@@ -41,7 +41,7 @@ defaults write com.apple.systemuiserver menuExtras -array \
 	"/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+defaults write NSGlobalDomain AppleHighlightColor -string "0.780400 0.815700 0.858800"
 
 # Set sidebar icon size to medium
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
@@ -205,8 +205,8 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 ###############################################################################
 
 # Require password immediately after sleep or screen saver begins
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPassword -int 0
+#defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
@@ -702,9 +702,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
 
-# Disable the all too sensitive backswipe on trackpads
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+# Enable the backswipe on trackpads
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool true
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool true
 
 # Disable the all too sensitive backswipe on Magic Mouse
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
